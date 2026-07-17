@@ -1,6 +1,1281 @@
 {
   "spin_category": "medium",
-  "n_systems": 0,
-  "description": "Single-orbital entropy s_i computed via autoCAS Hdf5Converter + OrbitalRDMBuilder",
-  "systems": []
+  "n_systems": 10,
+  "systems": [
+    {
+      "system_id": "CSD_IrBr6_3m_oct_spin2",
+      "spin_category": "medium",
+      "n_orbitals": 21,
+      "energy": -15515.009719964099,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.058235,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.006786,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.005838,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.005043,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 1.103049,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 1.236489,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 1.136149,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.09858,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.215533,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.151882,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.385015,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.158619,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 1.152165,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.17329,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 1.203466,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 1.174642,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.980055,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.318183,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 1.183281,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.464955,
+          "is_active": 1
+        }
+      ]
+    },
+    {
+      "system_id": "CSD_MoOCl6_2m_capoct_spin2",
+      "spin_category": "medium",
+      "n_orbitals": 26,
+      "energy": -509.29696475609705,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.041883,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.045477,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.044022,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.068855,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.113686,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.102456,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.152075,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.077959,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.046227,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.013571,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.587936,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.351253,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 0.649314,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.011742,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.035295,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.386615,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.640634,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.572014,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.197553,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.133554,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 21,
+          "entropy_si": 0.147957,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 22,
+          "entropy_si": 0.053699,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 23,
+          "entropy_si": 0.077678,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 24,
+          "entropy_si": 0.079236,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 25,
+          "entropy_si": 0.060095,
+          "is_active": 0
+        }
+      ]
+    },
+    {
+      "system_id": "CSD_RuCl4O2_trans_spin2",
+      "spin_category": "medium",
+      "n_orbitals": 25,
+      "energy": -536.6524358048009,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.033391,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.090517,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.041015,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.066258,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.065744,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.073987,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.071831,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.075671,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.103564,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.017022,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.448433,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.252851,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 0.18634,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.15887,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.068615,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.486081,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.315052,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.214513,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.226704,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.023203,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 21,
+          "entropy_si": 0.103683,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 22,
+          "entropy_si": 0.125039,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 23,
+          "entropy_si": 0.12996,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 24,
+          "entropy_si": 0.080136,
+          "is_active": 0
+        }
+      ]
+    },
+    {
+      "system_id": "Cu_Br6_chg-3_spin2",
+      "spin_category": "medium",
+      "n_orbitals": 25,
+      "energy": -17071.2058846086,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.008116,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.006545,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.004317,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.005319,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.006712,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.007625,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.006874,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.004969,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.641884,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.641954,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.004278,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.037663,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 0.029662,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.03069,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.004122,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.013681,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.005646,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.03937,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.027786,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.028106,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 21,
+          "entropy_si": 0.009606,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 22,
+          "entropy_si": 0.008744,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 23,
+          "entropy_si": 0.009014,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 24,
+          "entropy_si": 0.007762,
+          "is_active": 0
+        }
+      ]
+    },
+    {
+      "system_id": "Ir_Br6_chg-3_spin2_oct_d2p384",
+      "spin_category": "medium",
+      "n_orbitals": 21,
+      "energy": -15515.562968963919,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.116862,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.010319,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.00846,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.025289,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.372486,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.614755,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.610416,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.180435,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.076109,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.163202,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.14071,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.282701,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 0.656322,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.15044,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.583046,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.417062,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.379726,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.676584,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.235551,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.281334,
+          "is_active": 1
+        }
+      ]
+    },
+    {
+      "system_id": "Mn_Br4_chg-1_spin2",
+      "spin_category": "medium",
+      "n_orbitals": 28,
+      "energy": -16582.143784555356,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.025145,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.023087,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.032696,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.032767,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.007497,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.006207,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.229335,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 1.024954,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.101378,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.057022,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.795463,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.027642,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 1.023674,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.891249,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.554169,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.004605,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.015238,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.100464,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.595136,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.068411,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 21,
+          "entropy_si": 0.040674,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 22,
+          "entropy_si": 0.099045,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 23,
+          "entropy_si": 0.044983,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 24,
+          "entropy_si": 0.011218,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 25,
+          "entropy_si": 0.023326,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 26,
+          "entropy_si": 0.024906,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 27,
+          "entropy_si": 0.019363,
+          "is_active": 0
+        }
+      ]
+    },
+    {
+      "system_id": "Mo_Br4_chg0_spin2_tet_d2p451",
+      "spin_category": "medium",
+      "n_orbitals": 12,
+      "energy": -10352.531554613259,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.003552,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.003553,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.3095,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.212246,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.876375,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.442798,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.885961,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.2365,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.226934,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.537617,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.436374,
+          "is_active": 1
+        }
+      ]
+    },
+    {
+      "system_id": "Ni_Br6_chg-4_spin2",
+      "spin_category": "medium",
+      "n_orbitals": 25,
+      "energy": -16938.9379128503,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.006075,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.006323,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.003279,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.004479,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.024885,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.008863,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.35358,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.064583,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.484784,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.457161,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.417212,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.035925,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 0.022281,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.022832,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.004138,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.003537,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.003903,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.033379,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.025349,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.02507,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 21,
+          "entropy_si": 0.009348,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 22,
+          "entropy_si": 0.007492,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 23,
+          "entropy_si": 0.008176,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 24,
+          "entropy_si": 0.004145,
+          "is_active": 0
+        }
+      ]
+    },
+    {
+      "system_id": "Ti_Br4_chg-2_spin2_tet_d2p635",
+      "spin_category": "medium",
+      "n_orbitals": 28,
+      "energy": -11137.099373664967,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.010215,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.009818,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.009955,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.009946,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.056433,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.690076,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.686464,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.044112,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.046193,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.046645,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.03172,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.032562,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 0.0332,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.01421,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.701255,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.685807,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.007301,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.032863,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.031193,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.033356,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 21,
+          "entropy_si": 0.059445,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 22,
+          "entropy_si": 0.044827,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 23,
+          "entropy_si": 0.045515,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 24,
+          "entropy_si": 0.046263,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 25,
+          "entropy_si": 0.018551,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 26,
+          "entropy_si": 0.018265,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 27,
+          "entropy_si": 0.018869,
+          "is_active": 0
+        }
+      ]
+    },
+    {
+      "system_id": "V_Br6_chg-3_spin2_oct_d2p318",
+      "spin_category": "medium",
+      "n_orbitals": 28,
+      "energy": -16375.041320634979,
+      "orbital_entropy": [
+        {
+          "orbital_idx": 0,
+          "entropy_si": 0.0,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 1,
+          "entropy_si": 0.00983,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 2,
+          "entropy_si": 0.00724,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 3,
+          "entropy_si": 0.00719,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 4,
+          "entropy_si": 0.01818,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 5,
+          "entropy_si": 0.006288,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 6,
+          "entropy_si": 0.009304,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 7,
+          "entropy_si": 0.037583,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 8,
+          "entropy_si": 0.037895,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 9,
+          "entropy_si": 0.043182,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 10,
+          "entropy_si": 0.042587,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 11,
+          "entropy_si": 0.030385,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 12,
+          "entropy_si": 0.030099,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 13,
+          "entropy_si": 0.179296,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 14,
+          "entropy_si": 0.028854,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 15,
+          "entropy_si": 0.025399,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 16,
+          "entropy_si": 0.025423,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 17,
+          "entropy_si": 0.005703,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 18,
+          "entropy_si": 0.048531,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 19,
+          "entropy_si": 0.187546,
+          "is_active": 1
+        },
+        {
+          "orbital_idx": 20,
+          "entropy_si": 0.014863,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 21,
+          "entropy_si": 0.030884,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 22,
+          "entropy_si": 0.030754,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 23,
+          "entropy_si": 0.030678,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 24,
+          "entropy_si": 0.042825,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 25,
+          "entropy_si": 0.010965,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 26,
+          "entropy_si": 0.010881,
+          "is_active": 0
+        },
+        {
+          "orbital_idx": 27,
+          "entropy_si": 0.008735,
+          "is_active": 0
+        }
+      ]
+    }
+  ]
 }
