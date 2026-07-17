@@ -1,5 +1,6 @@
 {
   "spin_category": "low",
   "n_systems": 0,
+  "description": "Single-orbital entropy s_i computed via autoCAS Hdf5Converter + OrbitalRDMBuilder",
   "systems": []
 }
