@@ -1,5 +1,6 @@
 {
   "spin_category": "high",
   "n_systems": 0,
+  "description": "Single-orbital entropy s_i computed from QCMaquis Nup/Ndown/Nupdown",
   "systems": []
 }
