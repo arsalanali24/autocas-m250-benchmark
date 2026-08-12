@@ -76,65 +76,51 @@ DIST_DEFAULTS = {
     ('Zn','Br'):2.39,('Zn','Cl'):2.26,
 }
 
+import re as _re
+
+def _parse_name(name):
+    n = _re.sub(r"^CSD_", "", name)
+    metal = (_re.match(r"^([A-Z][a-z]?)", n) or _re.match(r".", "Fe")).group(1)
+    m_lig = _re.search(r"_(Cl|Br|F|N|O|I|S)(\d+)", n) or _re.search(r"(Cl|Br|F|N|O|I|S)(\d+)", n)
+    lig_atom = m_lig.group(1) if m_lig else "Cl"
+    n_lig    = int(m_lig.group(2)) if m_lig else 6
+    m_geom   = _re.search(r"(sq_pl|sqpl|oct|tet|jt)", n, _re.IGNORECASE)
+    geom     = m_geom.group(1).lower() if m_geom else ("oct" if n_lig==6 else "tet")
+    m_dist   = _re.search(r"d(\d+)p(\d+)", n)
+    dist     = None
+    if m_dist:
+        dec  = m_dist.group(2)
+        dist = int(m_dist.group(1)) + float(dec)/(10**len(dec))
+    return metal, lig_atom, n_lig, geom, dist
+
 def build_xyz(s):
-    """Build XYZ string from system dict.
-    Handles mixed-ligand systems by parsing csd_struct_name.
-    """
-    metal    = s['metal']
-    lig_str  = s['ligand']
-    lig_atom = LIG_ATOM.get(lig_str, lig_str[0] if lig_str else 'Cl')
-    geom     = s['geometry']
-    dist     = s.get('M_L_bond_distance_A')
-    coord    = s.get('coordination_number') or \
-               {'octahedral':6,'distorted_octahedral':6,'capped_octahedral':6,
-                'tetrahedral':4,'square_planar':4,'square_pyramidal':5}.get(geom, 6)
-    coord    = int(coord)
+    """Build XYZ. Always parses metal/ligand/geom/coord from system_id name.
+    Only reads M_L_bond_distance_A from JSON (reliable field)."""
+    name = s.get('system_id', s.get('name', ''))
+    metal, lig_atom, coord, geom, dist_name = _parse_name(name)
+    dist = s.get('M_L_bond_distance_A') or dist_name
 
-    # Detect mixed-ligand systems from csd_struct_name or system_id
-    # e.g. MoCl3O3_fac -> 3 Cl + 3 O in fac arrangement
-    #      RuCl4O2_trans -> 4 Cl + 2 O in trans arrangement
-    #      MnCl4O2_trans -> 4 Cl + 2 O in trans arrangement
-    #      FeCl4N2_cis   -> 4 Cl + 2 N in cis arrangement
-    #      MoOCl6        -> 1 O + 6 Cl (capped oct)
-    struct = s.get('csd_struct_name', '') or s.get('system_id', '')
-    mixed_atoms = []  # list of (atom, x, y, z)
-
-    # Parse patterns like Cl3O3, Cl4O2, Cl4N2, OCl6
+    # Mixed ligand detection from csd_struct_name or system_id
+    struct = s.get('csd_struct_name', '') or name
+    mixed_atoms = []
     m_mixed = re.findall(r'([A-Z][a-z]?)([0-9]+)', struct.split('_')[0] if '_' in struct else struct)
     if len(m_mixed) >= 2 and m_mixed[0][0] != metal:
-        # Mixed ligand: build positions explicitly
-        # Position pools for different isomers
-        # fac: A-ligands on one face (+x,+y,+z), B-ligands on opposite (-x,-y,-z)
-        # trans: major ligand equatorial, minor axial (trans pair)
-        # mer/default: sequential oct positions
         is_fac   = 'fac'   in struct.lower()
         is_trans = 'trans' in struct.lower()
-        is_cis   = 'cis'   in struct.lower()
-
-        # All oct unit positions
-        oct_pos = [(1,0,0),(-1,0,0),(0,1,0),(0,-1,0),(0,0,1),(0,0,-1)]
-        # fac faces: all mutually 90 degrees
-        fac_face1 = [(1,0,0),(0,1,0),(0,0,1)]    # one face
-        fac_face2 = [(-1,0,0),(0,-1,0),(0,0,-1)] # opposite face
-
-        # Build position pool based on isomer and stoichiometry
+        fac_face1 = [(1,0,0),(0,1,0),(0,0,1)]
+        fac_face2 = [(-1,0,0),(0,-1,0),(0,0,-1)]
+        all_pos   = [(1,0,0),(-1,0,0),(0,1,0),(0,-1,0),(0,0,1),(0,0,-1)]
         counts = [int(c) for sym,c in m_mixed if sym != metal]
-        if is_fac and len(counts) == 2 and counts[0] == 3 and counts[1] == 3:
+        if is_fac and len(counts)==2 and counts[0]==3 and counts[1]==3:
             pos_pool = fac_face1 + fac_face2
-        elif is_trans and len(counts) == 2 and counts[1] == 2:
-            # trans: minor ligand (2) goes axial (0,0,+z),(0,0,-z)
-            pos_pool = [(1,0,0),(-1,0,0),(0,1,0),(0,-1,0),(0,0,1),(0,0,-1)]
         else:
-            pos_pool = oct_pos
-
+            pos_pool = all_pos
         idx = 0
         for lig_sym, count in m_mixed:
-            if lig_sym == metal:
-                continue
+            if lig_sym == metal: continue
             dist_lig = DIST_DEFAULTS.get((metal, lig_sym),
                        DIST_DEFAULTS.get((metal, lig_atom), 2.30))
-            if dist and lig_sym == lig_atom:
-                dist_lig = float(dist)
+            if dist and lig_sym == lig_atom: dist_lig = float(dist)
             for _ in range(int(count)):
                 if idx < len(pos_pool):
                     ux,uy,uz = pos_pool[idx]
@@ -142,27 +128,25 @@ def build_xyz(s):
                     idx += 1
 
     if mixed_atoms:
-        lines = [str(1 + len(mixed_atoms)), s['system_id'],
+        lines = [str(1+len(mixed_atoms)), name,
                  f"{metal}  0.000000  0.000000  0.000000"]
         for atm, x, y, z in mixed_atoms:
             lines.append(f"{atm}  {x:.6f}  {y:.6f}  {z:.6f}")
-        return "\n".join(lines) + "\n"
+        return "\n".join(lines)+"\n"
 
-    # Single ligand type (standard case)
+    # Standard single-ligand geometry
     if dist is None:
         dist = DIST_DEFAULTS.get((metal, lig_atom),
-               DIST_DEFAULTS.get((metal, lig_str), 2.30))
-
+               DIST_DEFAULTS.get((metal, s.get('ligand',lig_atom)), 2.30))
     builder  = BUILDERS.get(geom, _oct)
-    lig_pos  = builder(float(dist))[:coord]
-
-    lines = [str(1 + len(lig_pos)), s['system_id'],
+    lig_pos  = builder(float(dist))[:int(coord)]
+    lines = [str(1+len(lig_pos)), name,
              f"{metal}  0.000000  0.000000  0.000000"]
     for x, y, z in lig_pos:
         lines.append(f"{lig_atom}  {x:.6f}  {y:.6f}  {z:.6f}")
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines)+"\n"
 
-# ── Load all systems ───────────────────────────────────────────────────────
+
 def load_all_systems():
     all_sys = {}
     for spin_cat, fpath in SPIN_FILES.items():
@@ -265,7 +249,7 @@ def run_system(sys_id, s):
     print(f"[yaml] {yaml_path}")
     print(f"[info] charge={s['total_charge']}  mult={s['multiplicity']}  "
           f"metal_row={s.get('metal_row','?')}  spin_cat={spin_cat}")
-    print(f"[ref]  CASSCF ref: CAS({s['n_active_electrons']},{s['n_active_orbitals']})")
+    print(f"[ref]  CASSCF ref: CAS({s.get('n_active_electrons','?')},{s.get('n_active_orbitals','?')})")
     print(f"[hint] {s.get('autocas_run_hint','')}")
 
     load_patches()
